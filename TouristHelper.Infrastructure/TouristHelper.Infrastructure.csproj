@@ -14,4 +14,8 @@
     <ProjectReference Include="..\TouristHelper.Application\TouristHelper.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+  </ItemGroup>
+
 </Project>

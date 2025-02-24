@@ -7,7 +7,7 @@ namespace TouristHelper.Infrastructure.Repositories;
 
 public class UserRepository(TouristHelperDbContext context) : IUserRepository
 {
-    public async Task<User?> CreateUserAsync(User user)
+    public async Task<User> CreateUserAsync(User user)
     {
         context.Users.Add(user);
         await context.SaveChangesAsync();
