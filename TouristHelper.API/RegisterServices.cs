@@ -1,5 +1,5 @@
 ﻿using TouristHelper.Application.DependencyInjection;
-using TouristHelper.Infrastructure;
+using TouristHelper.Infrastructure.DependencyInjection;
 
 namespace TouristHelper.API;
 

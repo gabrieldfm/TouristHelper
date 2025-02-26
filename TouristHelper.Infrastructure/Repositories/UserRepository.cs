@@ -19,4 +19,17 @@ public class UserRepository(TouristHelperDbContext context) : IUserRepository
     {
         return await context.Users.FirstOrDefaultAsync(u => u.Email == email);
     }
+
+    public async Task<User?> GetByIdAsync(Guid id)
+    {
+        return await context.Users.FindAsync(id);
+    }
+
+    public async Task UpdateRefreshTokenAsyn(User user, string refreshToken)
+    {
+        user.RefreshToken = refreshToken;
+        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+
+        await context.SaveChangesAsync();
+    }
 }

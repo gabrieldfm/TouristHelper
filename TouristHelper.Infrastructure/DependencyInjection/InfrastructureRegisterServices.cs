@@ -2,7 +2,7 @@
 using TouristHelper.Domain.Interfaces;
 using TouristHelper.Infrastructure.Repositories;
 
-namespace TouristHelper.Infrastructure;
+namespace TouristHelper.Infrastructure.DependencyInjection;
 
 public static class InfrastructureRegisterServices
 {
